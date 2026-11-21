@@ -1,0 +1,18 @@
+[1/5] cd /home/u12a/s3/build/esp-idf/esptool_py && /root/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/u12a/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/u12a/s3/build/partition_table/partition-table.bin /home/u12a/s3/build/s3.bin
+s3.bin binary size 0xff8b0 bytes. Smallest app partition is 0x200000 bytes. 0x100750 bytes (50%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/u12a/s3/build/bootloader/esp-idf/esptool_py && /root/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/u12a/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/u12a/s3/build/bootloader/bootloader.bin
+Bootloader binary size 0x59c0 bytes. 0x2640 bytes (30%) free.
+[2/3] cd /home/u12a/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/u12a/esp/esp-idf -D "SERIAL_TOOL=/root/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/u12a/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/u12a/s3/build -P /home/u12a/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p PORT -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x20000 s3.bin 0x8000 partition_table/partition-table.bin 0xf000 ota_data_initial.bin
+esptool.py v4.12.0
+Serial port PORT
+
+A fatal error occurred: Could not open PORT, the port is busy or doesn't exist.
+([Errno 2] could not open port PORT: [Errno 2] No such file or directory: 'PORT')
+
+Hint: Check if the port is correct and ESP connected
+
+FAILED: CMakeFiles/flash /home/u12a/s3/build/CMakeFiles/flash 
+cd /home/u12a/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/u12a/esp/esp-idf -D "SERIAL_TOOL=/root/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/u12a/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/u12a/s3/build -P /home/u12a/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

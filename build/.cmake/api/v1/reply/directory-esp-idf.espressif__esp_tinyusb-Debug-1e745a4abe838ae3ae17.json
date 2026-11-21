@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/espressif__esp_tinyusb",
+		"source" : "/mnt/e/esp-idf/projects/s3/components/espressif__esp_tinyusb"
+	}
+}

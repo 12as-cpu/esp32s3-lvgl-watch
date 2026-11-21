@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DSDKCONFIG=/home/u12a/s3/sdkconfig;-DIDF_PATH=/home/u12a/esp/esp-idf;-DIDF_TARGET=esp32s3;-DPYTHON_DEPS_CHECKED=1;-DPYTHON=/root/.espressif/python_env/idf5.2_py3.12_env/bin/python;-DEXTRA_COMPONENT_DIRS=/home/u12a/esp/esp-idf/components/bootloader;-DPROJECT_SOURCE_DIR=/home/u12a/s3;-DIGNORE_EXTRA_COMPONENT=;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'

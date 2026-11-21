@@ -1,0 +1,2 @@
+source /home/u12a/s3/build/bootloader/gdbinit/symbols
+source /home/u12a/s3/build/bootloader/gdbinit/connect
